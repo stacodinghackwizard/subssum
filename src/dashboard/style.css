@@ -1,0 +1,167 @@
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    /* background-color: #334; */
+    height: 100vh;
+    color: #fff;
+    padding: 20px;
+  }
+
+  #layout-wrapper{
+    /* background-color: #fff !important; */
+  }
+  .fund-wallet span{
+    background-color: #4169E1 !important;
+    border-radius: 10px !important;
+    color: #fff;
+    padding: 10px 40px !important;
+    font-size: 16px !important;
+    cursor: pointer;
+    text-align: center;
+  }
+  .support-icon1 span{
+    background-color: #EE5D50 !important;
+    
+  }
+  .support-icons span{
+    border-radius: 18px !important;
+    width: 66px !important;
+    height: 66px !important;
+    text-align: center !important;
+  }
+  .support-icon2 span{
+    background-color: #2DAE32;
+  }
+  .support-icon4 span{
+    background-color: #FFB547;
+  }
+  .support-icon5 span{
+    background-color: #4169E1;
+  }
+  .support-icon6 span{
+    background-color: #2DAE32;
+  }
+  .support-card{
+    border-radius: 24px !important;
+    border: 1px solid #D7E1F4 !important;
+    cursor: pointer;
+  }
+  .cardImg{
+    
+
+  }
+  .save-text{
+    color: #6882B6;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .card-text{
+    color: #3C517C !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+  }
+  .card-rounded{
+    border-radius: 20px !important;
+  }
+  .card-img{
+    background-image: url('/src//assets/images/card.png');
+    background-repeat: no-repeat;
+    background-position: left;
+  
+    /* width: 384px; */
+    top: -127px;
+    left: 265px;
+    /* height: 385px; */
+  }
+  .referral-text{
+    color: #3C517C !important;
+  }
+  .home-action{
+    color: #4169E1 !important;
+    font-weight: 500;
+  }
+  
+  .sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin-bottom: 10px;
+  }
+  
+  .submenu {
+    padding-left: 20px;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Main Content */
+  .main-content {
+    padding: 20px;
+  }
+  
+  .invoice-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .summary-card {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Invoice List */
+  .invoice-list header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  .floating_img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 210px;
+  }
+  .floating_img img {
+    width: 100%;
+    height: auto;
+  }
+  .wallet_card_wrap::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-30%);
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(353.08deg, #D7E1F4 11.66%, rgba(215, 225, 244, 0) 90.35%);
+  }

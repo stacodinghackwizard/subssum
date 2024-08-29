@@ -1,0 +1,45 @@
+/* Wrapper container for the tabs */
+.tab-container {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Styling the tab list */
+  .nav-tabs {
+    border-bottom: none;
+  }
+  
+  /* Styling individual tab buttons */
+  .nav-item button {
+    border-radius: 15px;
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    color: #333;
+    border: 3px solid #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Styling the active tab */
+  .nav-item button.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+  
+  /* Optional: Tab content container */
+  .tab-content-container {
+    margin-top: 20px;
+  }
+  
+  /* Loader div within the buttons (optional) */
+  .tab-loader {
+    display: none;
+  }
+  
+  .active-loader {
+    display: block;
+  }
+  
