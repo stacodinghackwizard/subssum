@@ -47,3 +47,8 @@ a{
     z-index: 1;
   }
   
+
+  .login-title{
+    font-weight: 600;
+    font-size: 25px !important;
+  }

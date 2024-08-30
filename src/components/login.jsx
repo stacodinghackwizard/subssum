@@ -114,6 +114,21 @@ export default function LogIn() {
                 </div>
               </div>
             </div>
+            
+            <div className="row justify-content-center py-3">
+
+              <div className="col-md-8 col-lg-6 col-xl-5">
+                
+                <div className=" text-center">
+                  
+                  <div className="">
+                    <h1 className=" bg-transparent login-title" style={{color: '#4C689E'}}>Login</h1>
+                  </div>
+                  
+                </div>
+                    
+              </div>
+            </div>
             <div className='row justify-content-center'>
 
               <div className='col-md-8 col-lg-6 col-xl-5'>
