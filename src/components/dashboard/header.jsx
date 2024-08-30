@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import RemoveNotification from './removeNotification';
 import {  UsersAvater2, UsersAvater3,} from "../../assets/images"
 import './style.css'
-export default function Header({ title } ) {
+export default function Header({ title, onToggleSidebar } ) {
 	const navigate = useNavigate();
 	
 
@@ -57,15 +57,11 @@ export default function Header({ title } ) {
 								</a>
 							</div>
 
-							{/* <button type="button" className="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger" id="topnav-hamburger-icon">
-								<span className="hamburger-icon">
-									<span></span>
-									<span></span>
-									<span></span>
-								</span>
-							</button> */}
+							 {/* Toggle button (visible on mobile) */}
+							 <button className="toggle-button" onClick={onToggleSidebar}>
+                                &#9776; {/* Hamburger menu icon */}
+                            </button>
 
-							
 							
 						</div>
 

@@ -1,26 +1,21 @@
-import DashboardHeader from '../../components/dashboard/header'
-import HomePage from '../home'
-import SideBar from '../../components/dashboard/sidebar'
 import { useState } from 'react';
-export default function WalletPage() {
-   
+import DashboardHeader from '../../components/dashboard/header';
+import SideBar from '../../components/dashboard/sidebar';
+import HomePage from '../home';
+
+export default function HomeView() {
     const [title, setTitle] = useState('Welcome, Lawal Wahab');
-	return (
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-		<>
-			
-            <div id="layout-wrapper">
-            
-                <DashboardHeader title={title} />
-                <SideBar setTitle={setTitle} />
-				<HomePage/>
-           </div>
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen);
+    };
 
-
-		</>
-
-
-
-
-	)
+    return (
+        <div id="layout-wrapper">
+            <DashboardHeader title={title} onToggleSidebar={toggleSidebar} />
+            <SideBar setTitle={setTitle} isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+            <HomePage />
+        </div>
+    );
 }

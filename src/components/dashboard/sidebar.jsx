@@ -4,8 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './style.css'
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import RemoveNotification from './removeNotification';
-export default function Sidebar({ setTitle }) {
+export default function Sidebar({ isSidebarOpen, toggleSidebar, setTitle }) {
     const navigate = useNavigate();
     const location = useLocation();
     const [activeLink, setActiveLink] = useState(location.pathname);
@@ -67,9 +66,12 @@ export default function Sidebar({ setTitle }) {
 
       <div>
         <ToastContainer />
-        <div className="app-menu navbar-menu" style={{backgroundColor: '#EFF3FB'}}>
+        <div className={`app-menu navbar-menu ${isSidebarOpen ? 'open' : ''}`} style={{backgroundColor: '#EFF3FB'}}>
            
             <div className="navbar-brand-box">
+                <button className="close-sidebar-btn" onClick={() => toggleSidebar(false)}>
+                    &times;
+                </button>
                 
 
                 <a className="logo logo-dark">
