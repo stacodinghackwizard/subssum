@@ -65,7 +65,7 @@ export default function Header({ title, onToggleSidebar } ) {
 							
 						</div>
 
-						<div className="d-flex align-items-center gap-2">
+						<div className="d-flex align-items-center justify-content-end w-100 gap-2">
 
 							<a href="#" className="">
 								<span className='upgrade-title'>
