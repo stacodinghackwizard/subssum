@@ -4,13 +4,13 @@ export default function DashboardInvoice() {
     return (
         <>
             <div>
-                <div className="main-content">
+                <div className="main-content px-0">
 
                     <div className="page-content">
                         <div className="container-fluid">
  
 
-                            <div className="row">
+                            <div className="row px-0">
                                 <div className="col-lg-12">
                                     <div className="card" id="invoiceList">
                                         
@@ -50,7 +50,7 @@ export default function DashboardInvoice() {
                                                         <tbody className="list form-check-all" id="invoice-list-data">
                                                             <tr>
                                                                 
-                                                                <td className="id d-flex px-0 mx-0 gap-3 align-items-center justify-content-center">
+                                                                <td className="id d-flex gap-3 align-items-center justify-content-center">
                                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                         <path d="M7.99997 8.00005L7.99998 11.2M7.99997 5.62817V5.60005M1.59998 12.0001L1.59998 3.99998C1.59998 2.67449 2.67449 1.59998 3.99998 1.59998L12 1.59998C13.3255 1.59998 14.4 2.67449 14.4 3.99998L14.4 12C14.4 13.3255 13.3255 14.4 12 14.4H3.99998C2.67449 14.4001 1.59998 13.3255 1.59998 12.0001Z" stroke="#FFB547" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                                     </svg>
@@ -72,7 +72,7 @@ export default function DashboardInvoice() {
                                                             </tr>
                                                             <tr>
                                                                 
-                                                                <td className="id d-flex px-0 mx-0 gap-3 align-items-center justify-content-center">
+                                                                <td className="id d-flex gap-3 align-items-center justify-content-center">
                                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M10.4 6.39998L6.82022 9.59998L5.59998 8.50918M14.4 3.99998L14.4 12C14.4 13.3255 13.3255 14.4 12 14.4H3.99998C2.67449 14.4 1.59998 13.3255 1.59998 12V3.99998C1.59998 2.67449 2.67449 1.59998 3.99998 1.59998H12C13.3255 1.59998 14.4 2.67449 14.4 3.99998Z" stroke="#2DAE32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                                     </svg>
@@ -95,7 +95,7 @@ export default function DashboardInvoice() {
                                                             </tr>
                                                             <tr>
                                                                 
-                                                                <td className="id d-flex px-0 mx-0 gap-3 align-items-center justify-content-center">
+                                                                <td className="id d-flex gap-3 align-items-center justify-content-center">
                                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                         <path d="M7.99997 8.00005L7.99998 11.2M7.99997 5.62817V5.60005M1.59998 12.0001L1.59998 3.99998C1.59998 2.67449 2.67449 1.59998 3.99998 1.59998L12 1.59998C13.3255 1.59998 14.4 2.67449 14.4 3.99998L14.4 12C14.4 13.3255 13.3255 14.4 12 14.4H3.99998C2.67449 14.4001 1.59998 13.3255 1.59998 12.0001Z" stroke="#FFB547" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                                     </svg>
