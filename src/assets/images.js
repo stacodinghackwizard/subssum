@@ -21,7 +21,9 @@ import UsersAvater2 from "./images/users/avatar-2.jpg";
 import UsersAvater3 from "./images/users/avatar-3.jpg";
 import UsersAvater5 from "./images/users/avatar-5.jpg";
 import WalletCard from "./images/card.png";
-import LoginSide from "./images/left-section.png"
+import LoginSide from "./images/left-section.png";
+import ProfileIcon from "./images/profileIcon.png";
+import NotificationIcon from "./images/notificationIcon.png"
 export {
     ProductImg1,
     ProductImg2,
@@ -43,5 +45,7 @@ export {
     UsersAvater3,
     UsersAvater5,
     WalletCard,
-    LoginSide
+    LoginSide,
+    ProfileIcon,
+    NotificationIcon
 };
