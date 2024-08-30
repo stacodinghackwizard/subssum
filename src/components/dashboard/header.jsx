@@ -93,7 +93,7 @@ export default function Header({ title, onToggleSidebar } ) {
 											
 									</span> */}
 									
-										<img src={ProfileIcon} style={{width: '32px', height: '32px'}} />
+									<img src={ProfileIcon} style={{width: '32px', height: '32px'}} />
 								</button>
 								
 

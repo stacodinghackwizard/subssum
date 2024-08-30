@@ -276,9 +276,9 @@
 }
 
 
-.header-item {
+/* .header-item {
   display: none;
-}
+} */
 
 @media (max-width: 768px) {
   .header-item {
