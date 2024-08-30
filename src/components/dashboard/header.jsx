@@ -34,7 +34,7 @@ export default function Header({ title, onToggleSidebar } ) {
 			<header id="page-topbar">
 				<ToastContainer />
 				<div className="layout-width">
-					<div className="navbar-header">
+					<div className="navbar-header ">
 						<div className="d-flex">
 							
 							<div className="navbar-brand-box horizontal-logo">

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './rmtableborder.css'
 
 export default function DashboardInvoice() {
     return (
@@ -32,25 +33,25 @@ export default function DashboardInvoice() {
                                         </div>
                                         <div className="card-body">
                                             <div>
-                                                <div className="table-responsive table-card">
-                                                    <table className="table align-middle table-nowrap" id="invoiceTable">
+                                                <div className="table-responsive  table-card border-none">
+                                                    <table className="table no-side-borders  align-middle table-nowrap" id="invoiceTable" style={{borderTop: '0'}}>
                                                         <thead className="text-muted">
                                                             <tr>
                                                                 
-                                                                <th className="sort" data-sort="service">Service</th>
-                                                                <th className="sort" data-sort="invoice_amount">Amount</th>
-                                                                <th className="sort" data-sort="invoice_amount">Total Amount</th>
-                                                                <th className="sort" data-sort="status">Status</th>
-                                                                <th className="sort" data-sort="payment_method">Payment Method</th>
-                                                                <th className="sort" data-sort="transaction_no">Transaction No</th>
+                                                                <th className='text-start' data-sort="service">Service</th>
+                                                                <th className='text-start' data-sort="invoice_amount">Amount</th>
+                                                                <th className='text-start' data-sort="invoice_amount">Total Amount</th>
+                                                                <th className='text-start' data-sort="status">Status</th>
+                                                                <th className='text-start' data-sort="payment_method">Payment Method</th>
+                                                                <th className='text-start' data-sort="transaction_no">Transaction No</th>
                                                           
-                                                                <th className="sort" data-sort="action">Actions</th>
+                                                                <th className='text-start' data-sort="action">Actions</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody className="list form-check-all" id="invoice-list-data">
-                                                            <tr>
+                                                            <tr style={{borderTop: 'none'}}>
                                                                 
-                                                                <td className="id d-flex gap-3 align-items-center justify-content-center">
+                                                                <td className="id d-flex gap-3 ">
                                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                         <path d="M7.99997 8.00005L7.99998 11.2M7.99997 5.62817V5.60005M1.59998 12.0001L1.59998 3.99998C1.59998 2.67449 2.67449 1.59998 3.99998 1.59998L12 1.59998C13.3255 1.59998 14.4 2.67449 14.4 3.99998L14.4 12C14.4 13.3255 13.3255 14.4 12 14.4H3.99998C2.67449 14.4001 1.59998 13.3255 1.59998 12.0001Z" stroke="#FFB547" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                                     </svg>
@@ -72,7 +73,7 @@ export default function DashboardInvoice() {
                                                             </tr>
                                                             <tr>
                                                                 
-                                                                <td className="id d-flex gap-3 align-items-center justify-content-center">
+                                                                <td className="id d-flex gap-3 ">
                                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M10.4 6.39998L6.82022 9.59998L5.59998 8.50918M14.4 3.99998L14.4 12C14.4 13.3255 13.3255 14.4 12 14.4H3.99998C2.67449 14.4 1.59998 13.3255 1.59998 12V3.99998C1.59998 2.67449 2.67449 1.59998 3.99998 1.59998H12C13.3255 1.59998 14.4 2.67449 14.4 3.99998Z" stroke="#2DAE32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                                     </svg>
@@ -95,7 +96,141 @@ export default function DashboardInvoice() {
                                                             </tr>
                                                             <tr>
                                                                 
-                                                                <td className="id d-flex gap-3 align-items-center justify-content-center">
+                                                                <td className="id d-flex gap-3 ">
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M7.99997 8.00005L7.99998 11.2M7.99997 5.62817V5.60005M1.59998 12.0001L1.59998 3.99998C1.59998 2.67449 2.67449 1.59998 3.99998 1.59998L12 1.59998C13.3255 1.59998 14.4 2.67449 14.4 3.99998L14.4 12C14.4 13.3255 13.3255 14.4 12 14.4H3.99998C2.67449 14.4001 1.59998 13.3255 1.59998 12.0001Z" stroke="#FFB547" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    </svg>
+
+                                                                    <a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary d-flex" style={{flexDirection: 'column'}}><span>Mtn Airtime VTU</span> <span>09063536635</span></a>
+                                                                </td>
+                                                                <td className="customer_name">
+                                                                    <div className="d-flex align-items-center">
+                                                                        <a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary" ><span>₦100.00</span></a>
+                                                                    </div>
+                                                                </td>
+                                                                <td className="email"><a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary" ><span>₦100.00</span></a></td>
+                                                                <td className="status"><span className="badge bg-white text-warning fw-medium">Initiated</span></td>
+                                                                <td className="payment_method"><span className="badge bg-white text-primary fw-medium">Transfer</span></td>
+                                                                <td className="transaction_no"><a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary d-flex" style={{flexDirection: 'column'}}><span>17045621860850336938179613</span> <span>6th January, 2024, 06:29PM</span></a></td>
+                                                                <td className="action"><span className="badge bg-primary-subtle text-primary">Open</span>
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                            <tr style={{borderTop: 'none'}}>
+                                                                
+                                                                <td className="id d-flex gap-3 ">
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M7.99997 8.00005L7.99998 11.2M7.99997 5.62817V5.60005M1.59998 12.0001L1.59998 3.99998C1.59998 2.67449 2.67449 1.59998 3.99998 1.59998L12 1.59998C13.3255 1.59998 14.4 2.67449 14.4 3.99998L14.4 12C14.4 13.3255 13.3255 14.4 12 14.4H3.99998C2.67449 14.4001 1.59998 13.3255 1.59998 12.0001Z" stroke="#FFB547" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    </svg>
+
+                                                                    <a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary d-flex" style={{flexDirection: 'column'}}><span>Mtn Airtime VTU</span> <span>09063536635</span></a>
+                                                                </td>
+                                                                <td className="customer_name">
+                                                                    <div className="d-flex align-items-center">
+                                                                        <a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary" ><span>₦100.00</span></a>
+                                                                    </div>
+                                                                </td>
+                                                                <td className="email"><a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary" ><span>₦100.00</span></a></td>
+                                                                <td className="status"><span className="badge bg-white text-warning fw-medium">Initiated</span></td>
+                                                                <td className="payment_method"><span className="badge bg-white text-primary fw-medium">Transfer</span></td>
+                                                                <td className="transaction_no"><a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary d-flex" style={{flexDirection: 'column'}}><span>17045621860850336938179613</span> <span>6th January, 2024, 06:29PM</span></a></td>
+                                                                <td className="action"><span className="badge bg-primary-subtle text-primary">Open</span>
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                
+                                                                <td className="id d-flex gap-3 ">
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M10.4 6.39998L6.82022 9.59998L5.59998 8.50918M14.4 3.99998L14.4 12C14.4 13.3255 13.3255 14.4 12 14.4H3.99998C2.67449 14.4 1.59998 13.3255 1.59998 12V3.99998C1.59998 2.67449 2.67449 1.59998 3.99998 1.59998H12C13.3255 1.59998 14.4 2.67449 14.4 3.99998Z" stroke="#2DAE32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    </svg>
+
+
+                                                                    <a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary d-flex" style={{flexDirection: 'column'}}><span>Airtel Data VTU</span> <span>09063536635</span></a>
+                                                                </td>
+                                                                <td className="customer_name">
+                                                                    <div className="d-flex align-items-center">
+                                                                        <a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary" ><span>₦2000.00</span></a>
+                                                                    </div>
+                                                                </td>
+                                                                <td className="email"><a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary" ><span>₦100.00</span></a></td>
+                                                                <td className="status"><span className="badge bg-white  fw-medium" style={{color: '#2DAE32'}}>Successful</span></td>
+                                                                <td className="payment_method"><span className="badge bg-white text-primary fw-medium">wallet</span></td>
+                                                                <td className="transaction_no"><a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary d-flex" style={{flexDirection: 'column'}}><span>17045621860850336938179613</span> <span>6th January, 2024, 06:29PM</span></a></td>
+                                                                <td className="action"><span className="badge bg-primary-subtle text-primary">Open</span>
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                
+                                                                <td className="id d-flex gap-3 ">
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M7.99997 8.00005L7.99998 11.2M7.99997 5.62817V5.60005M1.59998 12.0001L1.59998 3.99998C1.59998 2.67449 2.67449 1.59998 3.99998 1.59998L12 1.59998C13.3255 1.59998 14.4 2.67449 14.4 3.99998L14.4 12C14.4 13.3255 13.3255 14.4 12 14.4H3.99998C2.67449 14.4001 1.59998 13.3255 1.59998 12.0001Z" stroke="#FFB547" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    </svg>
+
+                                                                    <a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary d-flex" style={{flexDirection: 'column'}}><span>Mtn Airtime VTU</span> <span>09063536635</span></a>
+                                                                </td>
+                                                                <td className="customer_name">
+                                                                    <div className="d-flex align-items-center">
+                                                                        <a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary" ><span>₦100.00</span></a>
+                                                                    </div>
+                                                                </td>
+                                                                <td className="email"><a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary" ><span>₦100.00</span></a></td>
+                                                                <td className="status"><span className="badge bg-white text-warning fw-medium">Initiated</span></td>
+                                                                <td className="payment_method"><span className="badge bg-white text-primary fw-medium">Transfer</span></td>
+                                                                <td className="transaction_no"><a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary d-flex" style={{flexDirection: 'column'}}><span>17045621860850336938179613</span> <span>6th January, 2024, 06:29PM</span></a></td>
+                                                                <td className="action"><span className="badge bg-primary-subtle text-primary">Open</span>
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                            <tr style={{borderTop: 'none'}}>
+                                                                
+                                                                <td className="id d-flex gap-3 ">
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M7.99997 8.00005L7.99998 11.2M7.99997 5.62817V5.60005M1.59998 12.0001L1.59998 3.99998C1.59998 2.67449 2.67449 1.59998 3.99998 1.59998L12 1.59998C13.3255 1.59998 14.4 2.67449 14.4 3.99998L14.4 12C14.4 13.3255 13.3255 14.4 12 14.4H3.99998C2.67449 14.4001 1.59998 13.3255 1.59998 12.0001Z" stroke="#FFB547" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    </svg>
+
+                                                                    <a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary d-flex" style={{flexDirection: 'column'}}><span>Mtn Airtime VTU</span> <span>09063536635</span></a>
+                                                                </td>
+                                                                <td className="customer_name">
+                                                                    <div className="d-flex align-items-center">
+                                                                        <a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary" ><span>₦100.00</span></a>
+                                                                    </div>
+                                                                </td>
+                                                                <td className="email"><a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary" ><span>₦100.00</span></a></td>
+                                                                <td className="status"><span className="badge bg-white text-warning fw-medium">Initiated</span></td>
+                                                                <td className="payment_method"><span className="badge bg-white text-primary fw-medium">Transfer</span></td>
+                                                                <td className="transaction_no"><a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary d-flex" style={{flexDirection: 'column'}}><span>17045621860850336938179613</span> <span>6th January, 2024, 06:29PM</span></a></td>
+                                                                <td className="action"><span className="badge bg-primary-subtle text-primary">Open</span>
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                
+                                                                <td className="id d-flex gap-3 ">
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M10.4 6.39998L6.82022 9.59998L5.59998 8.50918M14.4 3.99998L14.4 12C14.4 13.3255 13.3255 14.4 12 14.4H3.99998C2.67449 14.4 1.59998 13.3255 1.59998 12V3.99998C1.59998 2.67449 2.67449 1.59998 3.99998 1.59998H12C13.3255 1.59998 14.4 2.67449 14.4 3.99998Z" stroke="#2DAE32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    </svg>
+
+
+                                                                    <a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary d-flex" style={{flexDirection: 'column'}}><span>Airtel Data VTU</span> <span>09063536635</span></a>
+                                                                </td>
+                                                                <td className="customer_name">
+                                                                    <div className="d-flex align-items-center">
+                                                                        <a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary" ><span>₦2000.00</span></a>
+                                                                    </div>
+                                                                </td>
+                                                                <td className="email"><a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary" ><span>₦100.00</span></a></td>
+                                                                <td className="status"><span className="badge bg-white  fw-medium" style={{color: '#2DAE32'}}>Successful</span></td>
+                                                                <td className="payment_method"><span className="badge bg-white text-primary fw-medium">wallet</span></td>
+                                                                <td className="transaction_no"><a href="javascript:void(0);" onClick="ViewInvoice(this);"  className="fw-medium link-primary d-flex" style={{flexDirection: 'column'}}><span>17045621860850336938179613</span> <span>6th January, 2024, 06:29PM</span></a></td>
+                                                                <td className="action"><span className="badge bg-primary-subtle text-primary">Open</span>
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                
+                                                                <td className="id d-flex gap-3 ">
                                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                         <path d="M7.99997 8.00005L7.99998 11.2M7.99997 5.62817V5.60005M1.59998 12.0001L1.59998 3.99998C1.59998 2.67449 2.67449 1.59998 3.99998 1.59998L12 1.59998C13.3255 1.59998 14.4 2.67449 14.4 3.99998L14.4 12C14.4 13.3255 13.3255 14.4 12 14.4H3.99998C2.67449 14.4001 1.59998 13.3255 1.59998 12.0001Z" stroke="#FFB547" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                                     </svg>

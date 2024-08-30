@@ -1,0 +1,11 @@
+.no-side-borders {
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.no-side-borders th,
+.no-side-borders td {
+    border-left: none !important;
+    border-right: none !important;
+    color: #6882B6 !important;
+}
