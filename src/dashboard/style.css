@@ -19,6 +19,24 @@
     cursor: pointer;
     text-align: center;
   }
+
+  @media (max-width: 768px) {
+    
+    .fund-wallet span{
+      background-color: #4169E1 !important;
+      border-radius: 10px !important;
+      color: #fff;
+      padding: 10px !important;
+      font-size: 16px !important;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+
+
+ 
+
+
   .support-icon1 span{
     background-color: #EE5D50 !important;
     

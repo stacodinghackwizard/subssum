@@ -207,6 +207,12 @@
   fill: white !important;
 }
 
+.sidebar-image{
+  background-position: center !important;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
 
 
 
@@ -245,19 +251,23 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 250px;
+  /* width: 320px !important; */
   height: 100%;
   background-color: #333;
+
   color: white;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
+}
+.login-sidebar{
+  
 }
 
 .sidebar-image-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 200px; /* Adjust the height as needed */
+  height: 200px; 
 }
 
 .sidebar-image {
@@ -265,52 +275,111 @@
   max-height: 100%;
 }
 
-/* Hide Sidebar on Mobile Screens */
+
+.header-item {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .app-menu {
+  .header-item {
+    display: block;
+  }
+
+  .app-menu.navbar-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; 
     width: 250px;
-    transform: translateX(-100%);
+    height: 100%;
+    background-color: #333; 
+    transition: all 0.3s ease-in-out;
   }
 
-  .app-menu.open {
-    transform: translateX(0);
+  .app-menu.navbar-menu.open {
+    left: 0;
   }
 
-  /* Sidebar content should be hidden by default */
   .sidebar-content {
-    display: none;
+    display: none; /* Hidden by default */
   }
 
   .sidebar-content.show {
-    display: block;
-  }
-
-  /* Toggle Button */
-  .toggle-button {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    background-color: #444 !important;
-    border: 3px solid #4169E1 !important;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .toggle-icon {
-    font-size: 24px;
-    color: white;
+    display: block; /* Show sidebar content when sidebar is open */
   }
 }
 
-/* Show Sidebar on larger screens */
-@media (min-width: 769px) {
-  .toggle-button {
-    display: none;
+/* Close button styles */
+.close-sidebar-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 45px !important;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer !important;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-sidebar-btn:hover {
+  color: #ccc;
+  font-weight: 700;
+  cursor: pointer !important;
+}
+
+/* Sidebar and responsive styles */
+@media (max-width: 768px) {
+  .app-menu.navbar-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Sidebar initially off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333; /* Adjust as needed */
+    transition: all 0.3s ease-in-out;
+  }
+
+  .app-menu.navbar-menu.open {
+    left: 0; /* Sidebar slides in when open */
   }
 
   .sidebar-content {
+    display: none; /* Hidden by default */
+  }
+
+  .sidebar-content.show {
+    display: block; /* Show sidebar content when sidebar is open */
+  }
+}
+
+/* Hide the toggle and close buttons by default */
+.toggle-button, .close-sidebar-btn {
+  display: none;
+}
+
+/* Show the toggle button and close button on mobile devices (screens <= 768px) */
+@media (max-width: 768px) {
+  .toggle-button {
     display: block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .close-sidebar-btn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 }
